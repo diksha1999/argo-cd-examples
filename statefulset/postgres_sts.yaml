@@ -25,4 +25,4 @@ spec:
   volumes:
   - name: mystorage
     persistentVolumeClaim:
-      claimName: my-manual-pvc
+      claimName: my-pvc
