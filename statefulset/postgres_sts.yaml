@@ -19,10 +19,10 @@ spec:
         ports:
         - containerPort: 5432
         volumeMounts:
-        - name: mystorage
+        - name: data
           mountPath: /var/lib/postgresql/data
   volumeClaimTemplates: [] # This is empty because we're not using it
   volumes:
-  - name: mystorage
+  - name: data
     persistentVolumeClaim:
       claimName: my-pvc
