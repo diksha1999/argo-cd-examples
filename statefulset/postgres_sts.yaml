@@ -21,11 +21,8 @@ spec:
         volumeMounts:
         - name: data
           mountPath: /var/lib/postgresql/data
-  volumeClaimTemplates:
-  - metadata:
-      name: data
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 3Gi
+  volumeClaimTemplates: [] # This is empty because we're not using it
+  volumes:
+  - name: mystorage
+    persistentVolumeClaim:
+      claimName: my-manual-pvc
